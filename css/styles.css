@@ -523,7 +523,6 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 
 .portfolio-link{
     display: block;
-    transition: box-shadow 250ms var(--primary-cubic);
 }
 
 .portfolio-item:hover,
@@ -549,7 +548,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     font-size: 18px;
     line-height: 1.56;
     color: var(--primary-color-white);
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: transform 250ms var(--primary-cubic);
 }
 .portfolio-item:hover .portfolio-details{
@@ -685,6 +684,8 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
    width: 100%;
    height: 100vh;
    background-color: rgba(0, 0, 0, 0.2); 
+   opacity: 1;
+   transition: opacity 250ms var(--primary-cubic), visibility 250ms var(--primary-cubic);
 }
 
 .modal{
@@ -697,11 +698,12 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     background: var(--primary-color-white);
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: scale 400ms var(--primary-cubic), opacity 400ms var(--primary-cubic);
+   
 }
 
 .close-btn{
     position: absolute;
+    cursor: pointer;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -712,6 +714,11 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     right: 8px;
     background-color: var(--primary-color-white);
     border-color: rgba(0, 0, 0, 0.1);
+}
+
+.close-btn:hover,
+.close-btn:focus{
+    fill: var(--accent-color);
 }
 
 .is-hidden{
